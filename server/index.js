@@ -4,20 +4,16 @@ const http = require('http');
 const cors = require('cors');
 const { Server } = require('socket.io'); // Add this
 const leaveRoom = require('./utils/leave-room'); // Add this
-
+require('dotenv').config();
 app.use(cors()); // Add cors middleware
 
 const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:3000',
+        origin: [process.env.PUBLIC_DOMAIN, process.env.PUBLIC_DOMAIN2],
         methods: ['GET', 'POST'],
     },
-    // cors: {
-    //     origin: 'http://localhost',
-    //     methods: ['GET', 'POST'],
-    // },
     
 });
 

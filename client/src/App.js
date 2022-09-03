@@ -6,7 +6,7 @@ import io from 'socket.io-client'; // Add this
 import Chat from './pages/chat';
 
 
-const socket = io.connect('http://localhost:4000'); // Add this -- our server will run on port 4000, so we connect to it from here
+const socket = io.connect(process.env.REACT_APP_SERVER_PATH); // Add this -- our server will run on port 4000, so we connect to it from here
 
 
 function App() {
