@@ -29,9 +29,9 @@ const RoomAndUsers = ({ socket, username, room }) => {
             <h2 className={styles.roomTitle}>{room}</h2>
 
             <div>
-                {roomUsers.length > 0 && <h5 className={styles.usersTitle}>Users:</h5>}
                 <div className={styles.userBlock}>
                     <ul className={styles.usersList}>
+                        <li><b>Users</b>: &nbsp;</li>
                         {roomUsers.map((user, i) => (
                             <li
                                 style={{
@@ -39,7 +39,7 @@ const RoomAndUsers = ({ socket, username, room }) => {
                                 }}
                                 key={user.id}
                             >
-                                {i + 1}. {user.username} {' '}
+                                {i + 1}. {user.username} &nbsp;
                             </li>
                         ))}
                     </ul>

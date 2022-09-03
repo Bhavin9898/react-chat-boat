@@ -7,27 +7,31 @@ const SendMessage = ({ socket, username, room }) => {
   const sendMessage = () => {
     if (message !== '') {
       const __createdtime__ = Date.now();
-      // Send message to server. We can't specify who we send the message to from the frontend. We can only send to server. Server can then send message to rest of users in room
-      socket.emit('send_message', { username, room, message, __createdtime__ });
+      if(message.trim() !== ''){
+        // Send message to server. We can't specify who we send the message to from the frontend. We can only send to server. Server can then send message to rest of users in room
+        socket.emit('send_message', { username, room, message, __createdtime__ });
+      }
       setMessage('');
     }
   };
 
   return (
     <div className={styles.sendMessageContainer}>
-      <input
+      <textarea
         className={styles.messageInput}
         placeholder='Message...'
         onChange={(e) => setMessage(e.target.value)}
         value={message}
         onKeyPress={(e) => {
-          if (e.key === "Enter") {
+          if (e.key === "Enter" && !e.shiftKey) {
             //setMessage(e.target.value)
             sendMessage()
+            setTimeout(()=>e.target.selectionEnd = 0,0);
+
           }
         }}
       />
-      <button className='btn btn-primary' onClick={sendMessage}>
+      <button className='btn btn-primary' style={{width: "20%"}} onClick={sendMessage}>
         Send
       </button>
     </div>

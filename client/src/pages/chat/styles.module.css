@@ -33,7 +33,7 @@
     padding-left: 0;
     margin: 0;
     color: rgb(153, 217, 234);
-    display: block;
+    display: flex;
   }
   .usersList li {
     margin-bottom: 12px;
@@ -67,11 +67,13 @@
     padding: 16px 20px 20px 16px;
     position: absolute;
     bottom: 64px;
+    width: 100%;
+    display: flex;
   }
   .messageInput {
     padding: 14px;
     margin-right: 16px;
-    width: 60%;
+    width: 74%;
     border-radius: 6px;
     border: 1px solid rgb(153, 217, 234);
     font-size: 0.9rem;

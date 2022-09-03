@@ -55,7 +55,7 @@ const Messages = ({ socket }) => {
                 <div className={styles.message} key={i}>
                     <div style={{ display: 'flex' }}>
                         <span style={{ width: '62%' }} className={styles.msgMeta}>{msg.username}</span>
-                        <span style={{witdh: '120px'}} className={styles.msgMeta}>
+                        <span style={{ width: '120px' }} className={styles.msgMeta}>
                             {formatDateFromTimestamp(msg.__createdtime__)}
                         </span>    
                     </div>
