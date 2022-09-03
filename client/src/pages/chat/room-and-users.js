@@ -30,23 +30,27 @@ const RoomAndUsers = ({ socket, username, room }) => {
 
             <div>
                 {roomUsers.length > 0 && <h5 className={styles.usersTitle}>Users:</h5>}
-                <ul className={styles.usersList}>
-                    {roomUsers.map((user) => (
-                        <li
-                            style={{
-                                fontWeight: `${user.username === username ? 'bold' : 'normal'}`,
-                            }}
-                            key={user.id}
-                        >
-                            {user.username}
-                        </li>
-                    ))}
-                </ul>
-            </div>
-
-            <button className='btn btn-outline' onClick={leaveRoom}>
+                <div className={styles.userBlock}>
+                    <ul className={styles.usersList}>
+                        {roomUsers.map((user, i) => (
+                            <li
+                                style={{
+                                    fontWeight: `${user.username === username ? 'bold' : 'normal'}`,
+                                }}
+                                key={user.id}
+                            >
+                                {i + 1}. {user.username} {' '}
+                            </li>
+                        ))}
+                    </ul>
+                    <button className='btn btn-outline' onClick={leaveRoom}>
                 Leave
             </button>
+                </div>
+
+            </div>
+
+
         </div>
     );
 };

@@ -53,16 +53,13 @@ const Messages = ({ socket }) => {
         <div className={styles.messagesColumn} ref={messagesColumnRef}>
             {messagesRecieved.map((msg, i) => (
                 <div className={styles.message} key={i}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <span className={styles.msgMeta}>{msg.username}</span>
-                    </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <span className={styles.msgMeta}>
-                            <br />{formatDateFromTimestamp(msg.__createdtime__)}
-                        </span>
+                    <div style={{ display: 'flex' }}>
+                        <span style={{ width: '62%' }} className={styles.msgMeta}>{msg.username}</span>
+                        <span style={{witdh: '120px'}} className={styles.msgMeta}>
+                            {formatDateFromTimestamp(msg.__createdtime__)}
+                        </span>    
                     </div>
                     <p className={styles.msgText}>{msg.message}</p>
-                    <br />
                 </div>
             ))}
         </div>

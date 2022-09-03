@@ -3,46 +3,55 @@
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    gap: 20px;
+    /* grid-template-columns: 1fr 4fr; */
+    /* gap: 20px; */
   }
   
   /* Room and users component */
   .roomAndUsersColumn {
-    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    padding:5px
   }
   .roomTitle {
-    margin-bottom: 60px;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 0.5;
     color: #fff;
+    margin:0;
+    margin-top: 2px;
   }
   .usersTitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #fff;
+    margin: 0;
+  }
+  .userBlock{
+    display: flex;
   }
   .usersList {
+    width: 80%;
     list-style-type: none;
     padding-left: 0;
-    margin-bottom: 60px;
+    margin: 0;
     color: rgb(153, 217, 234);
+    display: block;
   }
   .usersList li {
     margin-bottom: 12px;
+    display: flex;
   }
   
   /* Messages */
   .messagesColumn {
-    height: 85vh;
+    height: 64vh;
     overflow: auto;
     padding: 10px 10px 10px 40px;
   }
   .message {
     background: rgb(0, 24, 111);
     border-radius: 6px;
-    margin-bottom: 24px;
+    margin-top: 9px;
     max-width: 600px;
-    padding: 12px;
+    padding: 10px;
   }
   .msgMeta {
     color: rgb(153, 217, 234);
@@ -50,11 +59,14 @@
   }
   .msgText {
     color: #fff;
+    margin:8px 0 1px 0;
   }
   
   /* Message input and button */
   .sendMessageContainer {
     padding: 16px 20px 20px 16px;
+    position: absolute;
+    bottom: 64px;
   }
   .messageInput {
     padding: 14px;

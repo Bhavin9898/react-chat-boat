@@ -28,7 +28,7 @@ const SendMessage = ({ socket, username, room }) => {
         }}
       />
       <button className='btn btn-primary' onClick={sendMessage}>
-        Send Message
+        Send
       </button>
     </div>
   );
