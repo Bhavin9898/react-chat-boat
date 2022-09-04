@@ -7,7 +7,8 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: rgb(63, 73, 204);
+  background: color;
+  background: #efe7dd url("http://93.188.161.202/chat/wp.png") repeat
 }
 
 ::-webkit-scrollbar {
@@ -53,3 +54,5 @@ body {
   background: rgb(0, 24, 111);
   color: #fff;
 }
+
+/* chat boat */

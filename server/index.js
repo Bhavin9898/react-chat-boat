@@ -91,6 +91,7 @@ io.on('connection', (socket) => {
                 message: `${user.username} has disconnected from the chat.`,
             });
         }
+
     });
 
 });

@@ -10,7 +10,8 @@
   /* Room and users component */
   .roomAndUsersColumn {
     border-bottom: 1px solid #dfdfdf;
-    padding:5px
+    padding:5px;
+    background: #005e54; 
   }
   .roomTitle {
     text-transform: uppercase;
@@ -34,39 +35,41 @@
     margin: 0;
     color: rgb(153, 217, 234);
     display: flex;
+    height: 49px;
+    overflow: auto;
   }
   .usersList li {
     margin-bottom: 12px;
-    display: flex;
+    display: contents;
   }
   
   /* Messages */
   .messagesColumn {
-    height: 64vh;
+    height: 76vh;
     overflow: auto;
     padding: 10px 10px 10px 40px;
   }
   .message {
-    background: rgb(0, 24, 111);
+    background: #e1ffc7;
     border-radius: 6px;
     margin-top: 9px;
     max-width: 600px;
     padding: 10px;
   }
   .msgMeta {
-    color: rgb(153, 217, 234);
+    color: rgba(0, 0, 0, .45);
     font-size: 0.75rem;
   }
   .msgText {
-    color: #fff;
+    color: black;
     margin:8px 0 1px 0;
   }
   
   /* Message input and button */
   .sendMessageContainer {
-    padding: 16px 20px 20px 16px;
+    padding: 16px 10px 20px 16px;
     position: absolute;
-    bottom: 64px;
+    bottom: -8px;
     width: 100%;
     display: flex;
   }

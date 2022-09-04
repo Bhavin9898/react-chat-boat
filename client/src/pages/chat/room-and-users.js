@@ -1,12 +1,12 @@
 import styles from './styles.module.css';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-const PATH = process.env.REACT_APP_BASE_PATH
 
 const RoomAndUsers = ({ socket, username, room }) => {
 
     const [roomUsers, setRoomUsers] = useState([]);
     const navigate = useNavigate();
+    const PATH = process.env.REACT_APP_BASE_PATH
 
     useEffect(() => {
         socket.on('chatroom_users', (data) => {
@@ -43,7 +43,7 @@ const RoomAndUsers = ({ socket, username, room }) => {
                             </li>
                         ))}
                     </ul>
-                    <button className='btn btn-outline' onClick={leaveRoom}>
+                    <button className='btn btn-outline' style={{width: "20%", maxHeight:"41px"}} onClick={leaveRoom}>
                 Leave
             </button>
                 </div>

@@ -10,6 +10,8 @@ const Home = ({ username, setUsername, room, setRoom, socket }) => {
     const joinRoom = () => {
         if (room !== '' && username !== '') {
             socket.emit('join_room', { username, room });
+            localStorage.setItem('username', username);
+            localStorage.setItem('room', room);
         }
 
         // Redirect to /chat
